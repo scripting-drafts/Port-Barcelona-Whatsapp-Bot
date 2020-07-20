@@ -5,5 +5,5 @@ Run by typing "python3 portbcn+.py" on terminal and scan the QR with a phone.
 
 Requirements:
  - Python 3
- - Selenium
+ - Selenium (+geckodriver)
  - Firefox
