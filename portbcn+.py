@@ -1,5 +1,4 @@
 from selenium import webdriver
-#from bs4 import BeautifulSoup
 import requests
 from time import sleep
 from sys import argv
