@@ -163,7 +163,7 @@ while True:
 #                    text_box.send_keys(response)
 #                    print(name)
 #                    opcErr = False
-            if lang is not '':
+            if lang != '':
                 if message.text.lower() in vOptions[lang]:
                     target.write(message.text.lower() + ' ')
                     opt = vOptions[lang].index(message.text.lower())
