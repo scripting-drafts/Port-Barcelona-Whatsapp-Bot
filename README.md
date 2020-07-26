@@ -6,3 +6,6 @@ Requirements:
  - Python 3
  - Selenium (+geckodriver)
  - Firefox
+
+
+The triggers for the SQL database and Folium mapping haven't been implemented yet. There will probably be a threading feature as well in order to report multiple incidents at the same time.
