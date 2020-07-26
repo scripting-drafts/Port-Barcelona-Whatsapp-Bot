@@ -1,4 +1,4 @@
-Classes of Whatsapp Web change with time, so the code has to be updated with the proper new classes. Example: Line 138 points to the user name. (More info on /classes/)
+Classes of Whatsapp Web change with time, so the code has to be updated with the proper new classes. Example: Line 138 points to the user name. (More info on /classes/ and in the last lines of portbcn-early-release.py)
 
 Run by typing "python3 portbcn-early-release.py" on terminal and scan the QR with a phone.
 
