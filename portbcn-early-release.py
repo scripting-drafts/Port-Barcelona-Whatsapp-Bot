@@ -104,8 +104,7 @@ while True:
                 action.perform()
                 action.click()
                 action.perform()
-            except Exception as e:
-                print(e)
+            except Exception:
                 pass
     except Exception:
         pass
@@ -125,7 +124,6 @@ while True:
         if 'port' in message.text.lower():
             response = requests.post('http://127.0.0.1:8000/users/' + id + '/', headers={ 'content-Type': 'application/json'}, data = '{"id":"' + id + '"}')
             text_box.send_keys(msgWelcome)
-            print(response)
             cnt1 = 0
 
         while cnt1 != 20:
@@ -187,8 +185,7 @@ while True:
             if locationClass:
                 locationURL = locationClass.get_attribute('href')
                 coordinates = re.findall(reString, locationURL)
-                reponse = requests.post('http://127.0.0.1:8000/input/' + id + '/', headers={ 'content-Type': 'application/json'}, data= '{"id":' + id + ', "inc_type":"' + inc_type + '", "inc_detail":"' + inc_detail + '", "lat":' + coordinates[0] + ', "lon":' + coordinates[1] + '}')
-                print(response)
+                reponse = requests.post('http://127.0.0.1:8000/input/' + id + '/', headers={ 'content-Type': 'application/json'}, data= '{"id":"' + id + '", "inc_type":"' + inc_type + '", "inc_detail":"' + inc_detail + '", "lat":"' + coordinates[0] + '", "lon":"' + coordinates[1] + '"}')
                 cnt4 = 20
             else:
                 sleep(1)
@@ -203,4 +200,3 @@ while True:
 # box_context: "._2FVVk._2UL8j"
 # text_box: "._3FRCZ.copyable-text.selectable-text"
 # location: "._2geuz"
-
