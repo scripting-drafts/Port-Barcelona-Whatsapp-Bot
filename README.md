@@ -1,6 +1,6 @@
 First run the database from its directory by typing "uvicorn main:app --reload".
 
-Then run the bot by typing "python3 portbcn-early-release.py" on terminal and scan the QR with a phone.
+Then run the bot by typing "python3 portbcn-early-release.py" on terminal and scan the QR with a phone. To start it send him the word "port".
 
 Requirements:
  - Python 3
