@@ -111,7 +111,7 @@ while True:
         pass
 
     try:
-        id = driver.find_element_by_css_selector("._3ko75._5h6Y_._3Whw5").text
+        id = driver.find_element_by_css_selector("._3ko75._5h6Y_._3Whw5").text.replace('+', '00').replace(' ', '')
         text_box = driver.find_element_by_css_selector("._2FVVk._2UL8j > ._3FRCZ.copyable-text.selectable-text")
         message = driver.find_elements_by_css_selector("._3Whw5.selectable-text.invisible-space.copyable-text")[-1]
 
@@ -123,9 +123,9 @@ while True:
             pass
 
         if 'port' in message.text.lower():
-            response = msgWelcome
-            text_box.send_keys(response)
-            print(id)
+            response = requests.post('http://127.0.0.1:8000/users/' + id + '/', headers={ 'content-Type': 'application/json'}, data = '{"id":"' + id + '"}')
+            text_box.send_keys(msgWelcome)
+            print(response)
             cnt1 = 0
 
         while cnt1 != 20:
@@ -139,8 +139,8 @@ while True:
                     lang = 2
                 elif message.text.lower() == vLangs[3]:
                     lang = 3
-                response = vInstr[lang]
-                text_box.send_keys(response)
+                inc_lang = message.text.lower()
+                text_box.send_keys(vInstr[lang])
                 cnt1 = 20
                 cnt2 = 0
             else:
@@ -157,8 +157,8 @@ while True:
                 pass
             if message.text.lower() in vIncidents[lang] and bot_message == '':
                 inc = vIncidents[lang].index(message.text.lower())
-                response = vInc[lang][inc]
-                text_box.send_keys(response)
+                inc_type = vIncidents[1][vIncidents[lang].index(message.text.lower())]
+                text_box.send_keys(vInc[lang][inc])
                 cnt2 = 20
                 cnt3 = 0
             else:
@@ -174,8 +174,8 @@ while True:
                 bot_message = ''
                 pass
             if message.text.lower() in vIncDetail[lang] and bot_message == '':
-                response = locMSG[lang]
-                text_box.send_keys(response)
+                inc_detail = vIncDetail[1][vIncDetail[lang].index(message.text.lower())]
+                text_box.send_keys(locMSG[lang])
                 cnt3 = 20
                 cnt4 = 0
             else:
@@ -187,7 +187,8 @@ while True:
             if locationClass:
                 locationURL = locationClass.get_attribute('href')
                 coordinates = re.findall(reString, locationURL)
-                print(coordinates[0], coordinates[1])
+                reponse = requests.post('http://127.0.0.1:8000/input/' + id + '/', headers={ 'content-Type': 'application/json'}, data= '{"id":' + id + ', "inc_type":"' + inc_type + '", "inc_detail":"' + inc_detail + '", "lat":' + coordinates[0] + ', "lon":' + coordinates[1] + '}')
+                print(response)
                 cnt4 = 20
             else:
                 sleep(1)
@@ -202,3 +203,4 @@ while True:
 # box_context: "._2FVVk._2UL8j"
 # text_box: "._3FRCZ.copyable-text.selectable-text"
 # location: "._2geuz"
+
