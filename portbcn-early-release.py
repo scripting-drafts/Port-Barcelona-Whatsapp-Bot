@@ -2,6 +2,9 @@ from selenium import webdriver
 import requests
 from time import sleep
 import re
+import subprocess
+
+subprocess.Popen('uvicorn main:app --reload', stdin=None, stderr=None, shell=True)
 
 reString = re.compile('(\d+\.\d+)')
 
