@@ -1,4 +1,4 @@
-Run it from its folder by typing "python3.7 portbcn-early-release.py" on terminal and scan the QR code with a phone. To start it send him the word "port".
+Run it from its folder by typing "python3.7 start.py" on terminal and scan the QR code with a phone. To start it send him the word "port".
 
 Requirements:
  - Python 3
