@@ -82,7 +82,18 @@ locMSGEN = ["Please, share your location \n"]
 locMSGFR = ["S'il vous plaît, partager votre emplacement \n"]
 locMSG = [locMSGCA, locMSGES, locMSGEN, locMSGFR]
 
-driver = webdriver.Firefox()
+profile = webdriver.FirefoxProfile()
+profile.set_preference("dom.push.enabled", False)
+profile.set_preference("dom.webdriver.enabled", False)
+profile.set_preference('useAutomationExtension', False)
+profile.set_preference('privacy.trackingprotection.enabled', True)
+profile.set_preference("browser.cache.disk.enable", False)
+profile.set_preference("browser.cache.memory.enable", False)
+profile.set_preference("browser.cache.offline.enable", False)
+profile.set_preference("network.http.use-cache", False)
+profile.update_preferences()
+
+driver = webdriver.Firefox(profile)
 driver.get('https://web.whatsapp.com')
 
 cnt1 = 20
