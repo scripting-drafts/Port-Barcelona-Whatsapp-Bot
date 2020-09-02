@@ -5,6 +5,7 @@ Requirements:
  - FastAPI
  - pydantic
  - uvicorn
+ - sqlalchemy
  - selenium (+geckodriver)
  - requests
  - Firefox
