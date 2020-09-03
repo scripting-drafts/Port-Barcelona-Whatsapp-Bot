@@ -94,6 +94,7 @@ profile.set_preference("network.http.use-cache", False)
 profile.update_preferences()
 
 driver = webdriver.Firefox(profile)
+driver.implicitly_wait(10)
 driver.get('https://web.whatsapp.com')
 
 cnt1 = 20
