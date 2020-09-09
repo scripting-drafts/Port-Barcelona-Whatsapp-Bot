@@ -8,6 +8,6 @@ thread = Thread(target=uvicorn)
 
 thread.start()
 
-subprocess.Popen('python3.7 portbcn-early-release.py', stdin=None, stderr=None, shell=True).communicate()
+subprocess.Popen('python3.7 port-bot.py', stdin=None, stderr=None, shell=True).communicate()
 
 thread.join()
