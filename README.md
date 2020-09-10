@@ -1,6 +1,6 @@
 # Port-Bot
 
-Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. To initialize it message him.
+Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him to initialize it.
 
 Requirements:
  - Python 3
