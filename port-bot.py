@@ -120,8 +120,7 @@ while True:
     except Exception:
         pass
     try:
-        id_context = driver.find_element_by_css_selector('.DP7CM')
-        id = id_context.find_element_by_css_selector("._3ko75._5h6Y_._3Whw5").text.replace('+', '00').replace(' ', '')
+        id = driver.find_element_by_css_selector('.DP7CM > ._3ko75._5h6Y_._3Whw5').text.replace('+', '00').replace(' ', '')
         text_box = driver.find_element_by_css_selector("._2FVVk._2UL8j > ._3FRCZ.copyable-text.selectable-text")
 
         if id not in [*data]:
