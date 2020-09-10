@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver import ActionChains
-from time import sleep
 import requests
 import re
 
