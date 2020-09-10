@@ -127,7 +127,9 @@ while True:
 
         if id not in [*data]:
             text_box.send_keys(msgWelcome)
-            data[id] = [str(id) + str(x).zfill(10)]
+            if x == 9223372036854775807:
+                break
+            data[id] = [str(x).zfill(19)]
             x += 1
             response = requests.post('http://127.0.0.1:8000/users/' + id + '/', headers={ 'content-Type': 'application/json'}, data = '{"id":"' + data[id][0] + '"}')
 
