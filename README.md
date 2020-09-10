@@ -1,6 +1,6 @@
 # Port-Bot
 
-Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him to initialize it. It can only handle a message every 7 seconds aprox.
+Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him from another phone to initialize it. It can only handle a message every 7 seconds aprox.
 
 Requirements:
  - Python 3.7
