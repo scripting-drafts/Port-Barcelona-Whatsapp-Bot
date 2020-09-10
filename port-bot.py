@@ -127,7 +127,7 @@ while True:
 
         if id not in [*data]:
             text_box.send_keys(msgWelcome)
-            if x == 9223372036854775807:
+            if x == 9223372036854775807:    # largest integer the database can hold
                 break
             data[id] = [str(x).zfill(19)]
             x += 1
