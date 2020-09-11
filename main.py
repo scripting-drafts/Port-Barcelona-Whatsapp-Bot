@@ -17,8 +17,6 @@ def get_db():
     finally:
         db.close()
 
-# curl -X PUT http://127.0.0.1:8000/remove/9879780/
-
 @app.post("/input/{user_id}/", response_model=schemas.Item, tags=["input"])
 def enter_item(user_id: str, item: schemas.Incident, db: Session = Depends(get_db)):
     return crud.create_user_item(db=db, item=item, user_id=user_id)
