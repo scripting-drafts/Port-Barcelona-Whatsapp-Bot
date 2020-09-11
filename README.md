@@ -20,6 +20,8 @@ Libraries:
  - sqlalchemy
  - selenium
  - requests
+ - jinja2
+ - starlette
 
 
 Classes of Whatsapp Web change with time, so the code has to be updated with the proper new classes. More info on /classes/ and in the last lines of port-bot.py
