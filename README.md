@@ -4,6 +4,7 @@ Run it from its folder by typing "python3.7 start.py" and scan the QR code with 
 
 Requirements:
  - Python 3.7
+ - Golang 1.9.7
  - Firefox
  - Geckodriver
  
