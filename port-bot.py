@@ -89,7 +89,6 @@ End = [endMSGCA, endMSGES, endMSGEN, endMSGFR]
 reString = re.compile('(\d+\.\d+)')
 data = {}
 langs = {}
-#ids = list(range(1, 1000000))
 x = 0
 
 profile = webdriver.FirefoxProfile()
