@@ -35,7 +35,7 @@ def read_items(skip: int = 0, db: Session = Depends(get_db)):
 @app.get("/dashboard/", tags=["dashboard"])
 def dashboard(skip: int = 0, db: Session = Depends(get_db)):
     items = crud.get_items(db=db, skip=skip)
-    tmpl = Template('''
+    template = Template('''
     <table style="width:100%">
         <tr>
         <th>ID</th>
@@ -46,7 +46,7 @@ def dashboard(skip: int = 0, db: Session = Depends(get_db)):
         <th>Foto</th>
         <th>Usuario</th>
         </tr>
-        {% for item in items %}
+        {% for item in reversed(items) %}
         <tr>
         <td>{{ item['id'] }}</td>
         <td>{{ item['timestamp'] }}</td>
@@ -85,5 +85,5 @@ def dashboard(skip: int = 0, db: Session = Depends(get_db)):
         }
     </style>
     ''')
-
-    return HTMLResponse(tmpl.render(items = items))
+    template.globals['reversed'] = reversed
+    return HTMLResponse(template.render(items = items))
