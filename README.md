@@ -1,6 +1,6 @@
 # Port-Bot
 
-This is a prototype I kept developing after winning a contest with it. It could build a good source of data to train an actual bot.
+This is a prototype I keep developing in my spare time. It could build a good source of data to train an AI.
 
 Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him from another phone to initialize it. It can only handle a message every 7 seconds aprox.
 
