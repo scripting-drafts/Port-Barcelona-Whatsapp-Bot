@@ -1,8 +1,8 @@
 # Port-Bot
 
-This is a prototype I keep developing in my spare time. It could build a good source of data to train an AI. Soon available on GNU/Linux, currently testing on OS X.
+This is a prototype I keep developing in my spare time. It could build a good source of data to train an AI. Soon available on GNU/Linux, currently testing on OS X. 
 
-Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him from another phone to initialize it.
+Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him from another phone to initialize it. I added a queue in order to handle multiple users.
 
 The frontend is at 127.0.0.1:8000/items/ and 127.0.0.1:8000/invalid_items/
 
