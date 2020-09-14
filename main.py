@@ -46,7 +46,7 @@ def update(item_id: str, db: Session = Depends(get_db)):
 @app.get("/move/{item_id}/", tags=["move"])
 def make_invalid(item_id: str, db: Session = Depends(get_db)):
     item = crud.get_item(db, item_id=item_id)
-    data = item.inc_type + ' ' + item.inc_detail + ' ' + str(item.lat) + ' ' + str(item.lon) + ' ' + item.pic + ' ' + str(item.is_active)
+    data = item.inc_type + ' ' + item.inc_detail + ' ' + str(item.lat) + ' ' + str(item.lon) + ' ' + item.url + ' ' + item.pic + ' ' + str(item.is_active)
     Popen('curl -d \'{"id":"' + item_id + '" , "data":"' + data + '"}\' -H "Content-Type: application/json" -X POST http://127.0.0.1:8000/invalid_input/' + item.owner_id + '/', stdin=None, stderr=None, shell=True).communicate()
     db.delete(item)
     db.commit()
