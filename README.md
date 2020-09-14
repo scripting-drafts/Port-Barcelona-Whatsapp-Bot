@@ -35,3 +35,5 @@ Classes of Whatsapp Web change with time, so the code has to be updated with the
 
 * Pictures
 * Embedded Google Maps
+* Port-Bot Fix for a couple of loose ends
+* Better HTML/Javascript for a more responsive Active/Resolved functionality
