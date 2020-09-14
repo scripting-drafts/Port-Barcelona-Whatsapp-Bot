@@ -52,7 +52,7 @@ def make_invalid(item_id: str, db: Session = Depends(get_db)):
     db.commit()
     return
 
-# curl -X GET "http://127.0.0.1:8000/make_invalid/0000000000000000/"
+# curl -X GET "http://127.0.0.1:8000/move/0000000000000000/"
 
 @app.get("/json/", response_model=List[schemas.Item])
 def read_items(skip: int = 0, db: Session = Depends(get_db)):
