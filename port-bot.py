@@ -283,6 +283,7 @@ while True:
                     data[user_id].append(locationURL)
                     response = requests.post('http://127.0.0.1:8000/input/' + user_id + '/', headers={ 'content-Type': 'application/json'}, data= '{"id":"' + data[user_id][0] + '", "inc_type":"' + data[user_id][2] + '", "inc_detail":"' + data[user_id][3] + '", "lat":"' + data[user_id][4] + '", "lon":"' + data[user_id][5] + '", "url":"' + data[user_id][6] + '", "pic":"https://drive.google.com/file/d/16udAHXF3QNouyb6bXUNgIQYW_bUzhSDp/preview", "is_active":"True"}')
                     if any('400', '422') in response:
+                        data[user_id].append(response)
                         data[user_id][0].replace(re.compile('.*'), str('{:>016d}'.format(x)))
                         requests.post('http://127.0.0.1:8000/invalid_input/' + user_id + '/', headers={ 'content-Type': 'application/json'}, data='{"id":"' + data[user_id][0] + '", "data":"' + data[user_id] + '"}')
                         x += 1
