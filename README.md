@@ -11,7 +11,7 @@ Requirements:
  - Golang 1.12* (OS X)
  - Firefox
  - Geckodriver
- - Drive** (OS X)
+ - Drive**
  - Curl
  
 Libraries:
