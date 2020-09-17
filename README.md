@@ -8,11 +8,11 @@ The frontend is at 127.0.0.1:8000/items/ and 127.0.0.1:8000/invalid_items/
 
 Requirements:
  - Python 3.7
- - Golang 1.12* (in the near future)
+ - Golang 1.12* (OS X)
  - Firefox
  - Geckodriver
- - Drive** (in the near future)
- - Curl (to test it)
+ - Drive** (OS X)
+ - Curl
  
 Libraries:
  - FastAPI
