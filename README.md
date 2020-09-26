@@ -27,9 +27,9 @@ Libraries:
 
 Classes of Whatsapp Web change with time, so the code has to be updated with the proper new classes. More info in the CSS SELECTORS section of port-bot.py
 
-*https://blogs.amb.cat/innoamb/ca/2019/06/05/guanyadors-innobus-2019/
+*https://blogs.amb.cat/innoamb/ca/2019/06/05/guanyadors-innobus-2019/  
 **https://golang.org/doc/install?download=go1.12.darwin-amd64.pkg  
-***https://github.com/odeke-em/drive
+***https://github.com/odeke-em/drive  
   
   
 # TO DO
