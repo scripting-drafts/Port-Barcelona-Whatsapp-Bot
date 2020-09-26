@@ -4,7 +4,7 @@ This is an abandoned prototype I kept developing after winning a contest along w
 
 Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him from other phones to initialize it. I added a queue in order to handle multiple users.
 
-The frontend is at 127.0.0.1:8000/items/ and 127.0.0.1:8000/invalid_items/
+The frontend is at 127.0.0.1:8000/items/ and 127.0.0.1:8000/invalid_items/ . Items can be labeled as 'active' or 'solved'. They can also be marked as invalid in order to move them to the invalid_items database, in which all information but the ID is grouped together under a single label 'data'. 
 
 Requirements:
  - Python 3.7
