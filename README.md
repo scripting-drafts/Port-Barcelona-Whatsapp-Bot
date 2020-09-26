@@ -1,6 +1,6 @@
 # Port-Bot
 
-This is an abandoned prototype I kept developing after winning a contest on a workgroup*. It could build a good source of data for a supervised training of a convolutional neural network in order to classify pictures depending on the current labels. It was tested on OS X 10.10.5. 
+This is an abandoned prototype I kept developing after winning a contest along with a workgroup on a bigger project*. It could build a good source of data for a supervised training of a convolutional neural network in order to classify pictures depending on the current labels. It was tested on OS X 10.10.5. 
 
 Run it from its folder by typing "python3.7 start.py" and scan the QR code with a phone. Message him from other phones to initialize it. I added a queue in order to handle multiple users.
 
