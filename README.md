@@ -25,13 +25,13 @@ Libraries:
  - starlette
 
 
-Classes of Whatsapp Web change with time, so the code has to be updated with the proper new classes. More info on /classes/ and in the CSS SELECTORS section of port-bot.py
+Classes of Whatsapp Web change with time, so the code has to be updated with the proper new classes. More info in the CSS SELECTORS section of port-bot.py
 
 *https://golang.org/doc/install?download=go1.12.darwin-amd64.pkg  
 **https://github.com/odeke-em/drive
   
   
-# Next Steps
+# TO DO
 
 * Port-bot cleanup
 * Embedded Google Maps on the Frontend
